@@ -1,0 +1,341 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  height: auto;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+p {
+  font-family: "Roboto Condensed";
+  font-weight: 300;
+}
+h2,
+h3,
+a {
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+}
+header.navbar-container {
+  width: 100%;
+  max-width: 1200px;
+  padding-block: 1rem;
+  margin-inline: auto;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  z-index: 9999;
+}
+
+header.navbar-container .logo img {
+  width: 250px;
+}
+
+header.navbar-container .nav-list ul {
+  padding-left: 0;
+
+  display: flex;
+  justify-content: center;
+  gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+  list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+
+  text-decoration: none;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+
+  transition: all 0.2s ease-in-out;
+}
+.nav-list li a:hover {
+  background-color: #dd0000;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropbtn {
+  padding: 0.5rem 1.5rem;
+  border-radius: 999px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #ffcc00;
+  min-width: 160px;
+  border-radius: 20px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 20px;
+}
+
+article {
+  width: 80%;
+  background-color: #fff;
+  padding: 20px;
+  margin-left: 5%;
+  margin-right: 20px;
+  border-radius: 5px;
+  flex: 2;
+}
+
+article p {
+  text-align: justify;
+}
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+  max-width: 800px;
+  margin: 3px;
+}
+article button {
+  padding: 0.8rem 2.5rem;
+  border: 3px solid transparent;
+  border-radius: 999px;
+  margin-block-start: 1rem;
+  background-color: #000;
+  font-family: "Roboto Condensed";
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.15s ease-in;
+}
+article button:hover {
+  border: 3px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+.card {
+  width: calc(25% - 10px); /* Lebar card */
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 5px;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+/* Efek transisi zoom saat hover */
+.card img:hover {
+  transform: scale(1.1);
+}
+.card p {
+  text-align: center;
+}
+
+aside {
+  width: 30%;
+  max-width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 5%;
+}
+
+aside h2 {
+  text-align: center;
+}
+aside figure img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+.profile,
+.quote,
+.logo-porsche {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 20px;
+  color: #fff;
+}
+
+.profile {
+  background-color: #000;
+  border-top-right-radius: 20px;
+  border-top-left-radius: 20px;
+}
+
+.quote {
+  background-color: #dd0000;
+  text-align: justify;
+}
+
+.logo-porsche {
+  background-color: #ffcc00;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.profile img {
+  width: 100%; /* Make images responsive */
+  max-width: 300px; /* Limit maximum width */
+}
+.logo-porsche img {
+  width: 250px;
+}
+
+.profile img {
+  width: 120px;
+  border-radius: 50%;
+}
+main .content .content-description button:hover {
+  border: 3px solid #000;
+  background-color: transparent;
+  color: #000;
+}
+main .slider {
+  width: 600px;
+  overflow: hidden;
+  margin: auto;
+}
+
+main .slides {
+  display: flex;
+}
+
+main .slides img {
+  width: 600px;
+}
+main .slider button {
+  border: none;
+  margin-left: 30%;
+  position: relative;
+  background-color: rgba(0, 0, 0, 0);
+  color: #000;
+  cursor: pointer;
+  font-size: 1rem;
+}
+footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  height: 25vh;
+  margin-top: 50px;
+  background-color: #000;
+}
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.social-media a {
+  margin: 15px;
+  font-size: 3rem;
+  color: #dd0000;
+  padding-top: 30px;
+}
+.social-media a:hover {
+  color: #ffcc00;
+}
+.copyright {
+  color: #fff;
+  font-weight: 500;
+  bottom: 0;
+  text-align: center;
+}
+@media only screen and (max-width: 768px) {
+  header.navbar-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header.navbar-container .nav-list ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  header.navbar-container .nav-list li {
+    margin: 0.5rem 0;
+  }
+
+  main {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  main .slider {
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  main .slides img {
+    width: 100%;
+  }
+
+  main .slider button {
+    margin-left: 0;
+  }
+  .card {
+    width: calc(50% - 10px);
+  }
+  .card p {
+    font-size: 0.5rem;
+  }
+  aside {
+    width: 70%;
+    max-width: none;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
